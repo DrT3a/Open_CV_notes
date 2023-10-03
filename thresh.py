@@ -1,7 +1,7 @@
 import cv2 as cv
 
 # Load the input image
-img = cv.imread('E:\Drs\Programming\Open_CV_tutorial\Images\sorceress.jpg')
+img = cv.imread('E:\Drs\Programming\Open_CV_tutorial\Images\d2_sorceress.jpg')
 cv.imshow('Sorceress', img)
 cv.waitKey(0)
 

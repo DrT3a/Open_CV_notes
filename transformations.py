@@ -1,8 +1,8 @@
 import cv2 as cv
 import numpy as np
 
-img = cv.imread('E:\Drs\Programming\Open_CV_tutorial\Images\yen.jpg')
-cv.imshow('pirate', img)
+img = cv.imread('E:\Drs\Programming\Open_CV_tutorial\Images\drow.png')
+cv.imshow('Original', img)
 
 # Translation: Shifting an Image along the x,y axis or any combination of the above
 def translate(img, x, y): # x, y is the number of pixels
@@ -15,9 +15,9 @@ def translate(img, x, y): # x, y is the number of pixels
 # x ---> Right
 # y ---> Down
 # Essentially Translate shifts YOUR VIEW relative to the img.
-
 translated = translate(img, -100, 100)
 cv.imshow('Translated', translated)
+cv.waitKey(0)
 
 # Rotation
 def rotate(img, angle, rotPoint = None):
@@ -33,14 +33,17 @@ def rotate(img, angle, rotPoint = None):
 
 rotated = rotate(img, -45)
 cv.imshow('Rotated', rotated)
+cv.waitKey(0)
 
 # You can also rotate an already rotated img:
 rotated_rotated = rotate(rotated, -45)
 cv.imshow('Rotated_Rotated', rotated_rotated)
+cv.waitKey(0)
 
 # Resizing 
 resized = cv.resize(img, (500, 500), interpolation=cv.INTER_CUBIC)
 cv.imshow('Resized', resized)
+cv.waitKey(0)
 
 # Flipping
 flip = cv.flip(img, -1) 
@@ -48,6 +51,7 @@ flip = cv.flip(img, -1)
 # 1 = flip horizontally
 # -1 = flip vertically and horizontally
 cv.imshow('Flip', flip)
+cv.waitKey(0)
 
 # Cropping
 cropped = img[200:400, 300:400]

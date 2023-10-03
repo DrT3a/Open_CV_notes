@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 
 # Gradients and Edge detection are completely different from a mathematical point of view, but programmatically you can get away thinking of them as similar. We have already used Canny edge detection that is a multistep method. Here we discuss two gradient methods.
-img = cv.imread('E:\Drs\Programming\Open_CV_tutorial\Images\yen.jpg')
+img = cv.imread('E:\Drs\Programming\Open_CV_tutorial\Images\d2_sorceress.jpg')
 cv.imshow('Original', img)
 cv.waitKey(0)
 
@@ -25,6 +25,7 @@ cv.waitKey(0)
 sobelx = cv.Sobel(gray, cv.CV_64F, 1, 0)
 sobely = cv.Sobel(gray, cv.CV_64F, 0, 1)
 cv.imshow('Sobelx', sobelx)
+cv.waitKey(0)
 cv.imshow('Sobely', sobely)
 cv.waitKey(0)
 

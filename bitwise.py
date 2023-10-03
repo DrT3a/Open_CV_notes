@@ -15,22 +15,26 @@ circle = cv.circle(blank.copy(), (200,200), 200, 255, -1) #-1 fills the circle
 # Display images
 #cv.imshow('blank', blank)
 cv.imshow('Rectangle', rectangle)
+cv.waitKey(0)
 cv.imshow('Circle', circle)
+cv.waitKey(0)
 
 # Bitwise AND.(Η ΤΟΜΗ στα διαγράμματα Venn) (intersecting regions)
 bitwise_and = cv.bitwise_and(rectangle,circle) # We pass the two source images. Overlaps the images and returns the intercept 
 cv.imshow('AND', bitwise_and)
+cv.waitKey(0)
 
 # Bitwise OR (H ΕΝΩΣΗ στα διαγράμματα Venn) (non instercecting regions AND intersecting regions)
 bitwise_or = cv.bitwise_or(rectangle,circle) # This should overlap and return the intercepting and not intercepting regions.
 cv.imshow('OR', bitwise_or)
+cv.waitKey(0)
 
 # Bitwise XOR (Τα μη κοινά στοιχεία {[AUB] - [AՈB]}(Ένωση - Τομή) (non intersecting regions)
 bitwise_xor = cv.bitwise_xor(rectangle,circle)
 cv.imshow('XOR', bitwise_xor)
+cv.waitKey(0)
 
 # Bitwise NOT (Είναι σαν να λέμε το Συμπλήρωμα) (inverts the binary color)
 bitwise_not = cv.bitwise_not(circle)
 cv.imshow('NOT', bitwise_not)
-
 cv.waitKey(0)
