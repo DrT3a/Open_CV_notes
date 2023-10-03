@@ -26,6 +26,16 @@ cv.imshow('Simple Thresholded Inverse', thresh_inv)
 cv.waitKey(0)
 
 
+#___________________________Adaptive threshholding_________________________#
+# Downside is, we need to apply manually a threshold value.We can let the computer find that value.
+
+# Thresholding using mean:
+adaptive_thresh =  cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY, 11, 3) # (source image, maximumvalue, method: the mean of a neighborhood of pixels, threshold type, block size: the neighborhood or the kernel size over which it will compute the mean, C value: an integer subtracted from the mean allowing us to finetune) # Same applies with _INV
+cv.imshow('Adaptive Thresholding', adaptive_thresh)
+cv.waitKey(0)
 
 
-
+# Using Gaussian: The difference is that it added a weight to each pixel value and calculated the mean.
+adaptive_thresh_gauss    =  cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY, 11, 3) 
+cv.imshow('Adaptive Thresholding Gauss', adaptive_thresh_gauss)
+cv.waitKey(0)
