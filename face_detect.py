@@ -20,7 +20,8 @@ cv.waitKey(0)
 haar_cascade = cv.CascadeClassifier('haar_face.xml') # Reads all 33k lines of code in haar_face.xml and stores them in the haar_cascade variable.
 
 # Detect the face in the image.
-faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=11) # minNeighbors specifies the number of neighbors a rectangle should have to be called a face.
+faces_rect = haar_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=11)
+# minNeighbors specifies the number of neighbors a rectangle should have to be called a face.
 # The detectMultiScale takes the gray img, uses the variables scaleFactor and minNeighbors, to detect a face and return the rectangular coordinates of that face as a LIST to faces_rect.
 
 # We can print the number of rectangles using len()
