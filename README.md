@@ -1,2 +1,2 @@
 # Open_CV_notes
-# Basic and advanced with face detection + recognition project.
+Basic and advanced with face detection + recognition project.
